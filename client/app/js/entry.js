@@ -36,6 +36,10 @@ gameApp.config(['$ocLazyLoadProvider' , '$routeProvider', 'localStorageServicePr
       controller: 'SignupController',
       templateUrl: '/views/sign_up_in_view.html'
     })
+    .when('/boards', {
+      controller: 'authController',
+      templateUrl: '/views/boards.html'
+    })
     .when('/game', {
       templateUrl: '/views/game_main.html',
       resolve: {

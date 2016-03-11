@@ -1,0 +1,11 @@
+<form data-ng-submit="save(user)">
+
+  <label for="name">Name:</label> <br>
+  <input type="text" name="name" data-ng-model="user.name" placeholder="Name"/> <br>
+
+  <label for="score">score:</label> <br>
+  <input type="number" name="score" data-ng-model="user.score" placeholder="Score"/> <br>
+
+  <ng-transclude></ng-transclude>
+  <button class="button is-small is-primary" type="submit">{{buttonText}}</button>
+</form>

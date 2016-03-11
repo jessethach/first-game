@@ -1,0 +1,18 @@
+<section class="columns" data-ng-controller="authController">
+
+  <section class="column is-half is-offset-quarter" ng-init="updateUsername()">
+    <h1>Users:</h1>
+
+    <user data-user-data="newUser">
+
+      <user-form
+        data-button-text="Create new Score"
+        data-user="newUser"
+        data-save="updateScore(newUser)"
+      ></user-form>
+
+    </user>
+
+  </section>
+
+</section>

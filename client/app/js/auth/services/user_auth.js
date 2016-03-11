@@ -72,6 +72,24 @@ module.exports = function(app) {
         });
       },
 
+      putUsername: function(user, callback) {
+        callback = callback || function() {};
+        $http({
+          method: 'PUT',
+          url: 'http://localhost:3000/api/currentuser',
+          headers: {
+            token: auth.getToken()
+          },
+          user: user
+        })
+        .then(function(res) {
+          user = res.data.username;
+          callback(null, res);
+        }, function(res) {
+          callback(res);
+        });
+      },
+
       username: function() {
         if(!user) auth.getUsername();
         return user;
